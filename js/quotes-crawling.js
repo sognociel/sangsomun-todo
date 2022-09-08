@@ -1258,18 +1258,3 @@ quotes = [
     Meaning: "즐거운일이 다하면 슬픈일이 온다.",
   },
 ];
-
-const hanja = document.querySelector("#quote span:first-child");
-const hangul = document.querySelector("#quote span:nth-child(2)");
-const meaning = document.querySelector("#quote span:last-child");
-
-function rand(min, max) {
-  // max 값 포함하지 않는 랜덤한 수
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-const todaysQuote = quotes[rand(0, quotes.length)];
-
-hanja.innerText = todaysQuote.Hanja;
-hangul.innerText = todaysQuote.Hangul;
-meaning.innerText = todaysQuote.Meaning;

@@ -19,11 +19,9 @@ for i in range(0, len(proverbFirst)):
     else :
         proverbList["Meaning"].append(proverbFirst[i])
 
-# def quote():
-#     return proverbList
-
-# if __name__=="__main__":
-#     print(quote())
-
+f = open("C:/Users/user/Desktop/project/momentum/js/quotes-crawling.js", "w", encoding="utf-8")
+f.write("quotes = [")
 for i in range(0, len(proverbList["Hanja"])) :
-    print("{"+"Hanja : '" + proverbList["Hanja"][i] + "', Hangul : '" + proverbList["Hangul"][i] + "', Meaning : '" + proverbList["Meaning"][i]+"'"+"},")
+    f.write("{"+"Hanja : '" + proverbList["Hanja"][i] + "', Hangul : '" + proverbList["Hangul"][i] + "', Meaning : '" + proverbList["Meaning"][i]+"'"+"},\n")
+f.write("]")
+f.close()
