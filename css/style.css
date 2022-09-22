@@ -1,3 +1,45 @@
+@import "reset.css";
+@import "variables.css";
+
+@import "background.css";
+@import "login-out-form.css";
+@import "todo.css";
+@import "clock-weather.css";
+@import "quotes.css";
+
+/* Login Form font*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;900&display=swap");
+/* Body font */
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+/* Hangul font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;700&display=swap");
+
 .hidden {
-    display: none;
+  display: none;
+}
+
+main {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: var(--body-font);
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  z-index: 1;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(3) {
+  height: inherit;
+  width: 30%;
 }

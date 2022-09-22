@@ -5,11 +5,6 @@ quotes = [
     Meaning: "가혹하게 착취하여 매우 재촉함.",
   },
   {
-    Hanja: "佳人薄命",
-    Hangul: "가인박명",
-    Meaning: "여자의 얼굴이 너무 빼어나면 운명이 기박하다는 뜻이다.",
-  },
-  {
     Hanja: "刻骨難忘",
     Hangul: "각골난망",
     Meaning: "은덕을 입어 고마운 마음이 깊이 뼛속까지 스며 잊혀지지 아니함.",
@@ -82,12 +77,6 @@ quotes = [
     Meaning: "죽어서도 은혜를 잊지않고 꼭 갚는다는 말",
   },
   { Hanja: "輕擧妄動", Hangul: "경거망동", Meaning: "경솔하게 함부로 행동함" },
-  {
-    Hanja: "傾國之色",
-    Hangul: "경국지색",
-    Meaning:
-      "임금이 가까이하여 나라가 뒤집혀도 모를 만큼 뛰어나게 잘 생긴 미인.",
-  },
   {
     Hanja: "敬而遠之",
     Hangul: "경이원지",
@@ -267,7 +256,6 @@ quotes = [
     Hangul: "내우외환",
     Meaning: "국내에서 일어나는 근심과 외국으로부터 받는 근심",
   },
-  { Hanja: "路柳檣花", Hangul: "노류장화", Meaning: "창녀를 빗대어 하는 말" },
   { Hanja: "勞心焦思", Hangul: "노심초사", Meaning: "매우 애쓰며 속을 태움" },
   {
     Hanja: "累卵之危",
@@ -494,11 +482,6 @@ quotes = [
     Hanja: "父傳子傳",
     Hangul: "부전자전",
     Meaning: "대대로 아버지가 아들에게 전함",
-  },
-  {
-    Hanja: "夫唱婦隨",
-    Hangul: "부창부수",
-    Meaning: "남편이 창을 하면 아내도 따라함. 남편뜻을 아내가 좇음",
   },
   {
     Hanja: "附和雷同",
@@ -749,11 +732,6 @@ quotes = [
     Meaning: "말 하는 것이 사리에 맞는다는 뜻",
   },
   { Hanja: "與民同樂", Hangul: "여민동락", Meaning: "임금과 백성이 함께 즐김" },
-  {
-    Hanja: "女必從夫",
-    Hangul: "여필종부",
-    Meaning: "아내는 반드시 남편의 뜻을 따라야한다",
-  },
   {
     Hanja: "易之思之",
     Hangul: "역지사지",
@@ -1015,11 +993,6 @@ quotes = [
     Meaning: "남의 급서를 찔러 충고하는 것",
   },
   {
-    Hanja: "糟糠之妻",
-    Hangul: "조강지처",
-    Meaning: "가난을 참고 고생을 같이하며 남편을 섬긴 아내",
-  },
-  {
     Hanja: "朝令暮改",
     Hangul: "조령모개",
     Meaning: "변덕이 심하여 종잡을 수 없음에 비유하는 말",
@@ -1117,11 +1090,6 @@ quotes = [
     Meaning: "대의 명분을 밝혀 세우는 사필의 논법",
   },
   {
-    Hanja: "出嫁外人",
-    Hangul: "출가외인",
-    Meaning: "출가한 딸은 남이나 마찬가지이다",
-  },
-  {
     Hanja: "醉生夢死",
     Hangul: "취생몽사",
     Meaning: "아무 뜻 없이 한 세상을 흐리멍텅하게 보냄",
@@ -1199,7 +1167,6 @@ quotes = [
     Hangul: "호시탐탐",
     Meaning: "기회를 노리며 형세를 살핌",
   },
-  { Hanja: "皓齒丹脣", Hangul: "호치단순", Meaning: "여자의 썩 아름다운 얼굴" },
   {
     Hanja: "畵龍點睛",
     Hangul: "화룡점정",
@@ -1213,7 +1180,7 @@ quotes = [
   {
     Hanja: "畵中之餠",
     Hangul: "화중지병",
-    Meaning: "보기만 했지 실제로 얻을 수 없",
+    Meaning: "보기만 했지 실제로 얻을 수 없음",
   },
   {
     Hanja: "換骨奪胎",
@@ -1268,8 +1235,13 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const todaysQuote = quotes[rand(0, quotes.length)];
+function todaysQuoteRandom() {
+  const todaysQuote = quotes[rand(0, quotes.length)];
 
-hanja.innerText = todaysQuote.Hanja;
-hangul.innerText = todaysQuote.Hangul;
-meaning.innerText = todaysQuote.Meaning;
+  hanja.innerText = todaysQuote.Hanja;
+  hangul.innerText = todaysQuote.Hangul;
+  meaning.innerText = todaysQuote.Meaning;
+}
+
+todaysQuoteRandom();
+setInterval(todaysQuoteRandom, 10000);

@@ -8,43 +8,77 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input
-        type="text"
-        placeholder="Write a To Do and Press Enter."
-        required
-      />
-    </form>
-    <ul id="todo-list"></ul>
-    <form id="logout-form" class="hidden">
-      <input type="button" value="Log out" />
-    </form>
-    <div id="quote">
-      <span></span>
-      <span></span><br />
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <main>
+      <div class="filter"></div>
+
+      <section class="left">
+        <div id="weather">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="clock">00·00·00</div>
+        <div></div>
+      </section>
+
+      <section class="middle">
+        <div class="login-title">
+          <form id="login-form" class="hidden">
+            <input required maxlength="6" type="text" placeholder="號" />
+            <span>호칭을 입력하시오</span>
+            <input type="submit" value="確認" />
+          </form>
+
+          <form id="logout-form" class="hidden">
+            <div id="greeting"></div>
+            <span>業務를 수행하시오</span>
+            <input type="button" value="終了" />
+          </form>
+        </div>
+
+        <div class="login-sub">
+          <img
+            src="img/120_약수리-벽화고분-널방-동벽_동물무늬_청룡.png"
+            alt=""
+          />
+
+          <div class="fog-low">
+            <img
+              src="http://demos.creative-tim.com/paper-kit-2/assets/img/fog-low.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="quote">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="moving-clouds"></div>
+      </section>
+
+      <section class="right"></section>
+
+      <div class="todo hidden">
+        <img src="img/roll-of-paper.png" alt="" />
+        <form id="todo-form">
+          <input type="text" placeholder="上疏文" required />
+          <span>今日의 上疏文을 정리하시오</span>
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+    </main>
+
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/152669f578.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,81 @@
+.login-title {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  z-index: 99;
+}
+
+input {
+  text-align: center;
+}
+
+#login-form input:nth-child(1),
+#greeting {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+  font-weight: 900;
+  padding: 5px;
+  box-sizing: border-box;
+  box-shadow: inset 5px 5px 30px 10px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(top, #ffffff 35%, #4e6773 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--login-font);
+}
+
+#greeting {
+  box-shadow: none;
+  margin: 20px 0px;
+  font-family: var(--hangul-font);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#login-form span,
+#logout-form span {
+  display: block;
+  text-align: center;
+  font-family: var(--hangul-font);
+  margin: 10px 0px;
+}
+
+#login-form input[type="submit"],
+#logout-form input[type="button"] {
+  background-color: black;
+  font-size: 18px;
+  padding: 5px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.login-sub {
+  max-width: 50%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.login-sub img {
+  width: 80%;
+  height: 30%;
+  margin-top: -80px;
+}
+
+.fog-low {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.85;
+}
+
+.fog-low img {
+  width: 100%;
+}

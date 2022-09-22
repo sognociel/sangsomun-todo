@@ -1,0 +1,42 @@
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--hangul-font);
+}
+
+.left div:nth-child(2) {
+  height: 60%;
+  text-align: center;
+}
+
+.left div:nth-child(1),
+.left div:nth-child(3) {
+  height: 20%;
+}
+
+#clock {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
+#weather span {
+  display: block;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  opacity: 0.8;
+}
