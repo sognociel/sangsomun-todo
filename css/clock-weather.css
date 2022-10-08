@@ -6,11 +6,13 @@
   font-family: var(--hangul-font);
 }
 
+/* clock */
 .left div:nth-child(2) {
   height: 60%;
   text-align: center;
 }
 
+/* weather */
 .left div:nth-child(1),
 .left div:nth-child(3) {
   height: 20%;
@@ -26,17 +28,30 @@
   filter: blur(1px);
 }
 
-#weather span {
-  display: block;
-}
-
 #weather {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 700;
   color: white;
   opacity: 0.8;
+  text-align: center;
+}
+
+#weather span {
+  display: block;
+  margin: 5px;
+}
+
+#weather span:nth-child(2) {
+  line-height: 1.3;
+  font-size: 20px;
+}
+
+#weather span:nth-child(1) {
+  font-family: var(--login-font);
+  font-weight: 900;
+  font-size: 45px;
 }

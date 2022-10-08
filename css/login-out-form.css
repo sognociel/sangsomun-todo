@@ -11,6 +11,10 @@ input {
   text-align: center;
 }
 
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
 #login-form input:nth-child(1),
 #greeting {
   width: 100%;
@@ -31,10 +35,6 @@ input {
   box-shadow: none;
   margin: 20px 0px;
   font-family: var(--hangul-font);
-}
-
-::-webkit-input-placeholder {
-  text-align: center;
 }
 
 #login-form span,

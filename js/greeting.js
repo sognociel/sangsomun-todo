@@ -8,6 +8,10 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+function paintGreetings(username) {
+  greeting.innerText = `어서오시오 ${username}`;
+}
+
 function loginSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -16,10 +20,6 @@ function loginSubmit(event) {
   paintGreetings(username);
   logoutForm.classList.remove(HIDDEN_CLASSNAME);
   todo.classList.remove(HIDDEN_CLASSNAME);
-}
-
-function paintGreetings(username) {
-  greeting.innerText = `어서오시오 ${username}`;
 }
 
 function logoutClick() {

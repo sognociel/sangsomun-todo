@@ -4,7 +4,7 @@ from urllib.request import urlopen
 page = urlopen("https://ko.wikiquote.org/wiki/%ED%95%9C%EB%AC%B8_%EC%84%B1%EC%96%B4");
 soup = BeautifulSoup( page, "html.parser");
 
-proverbList = {"Hanja":[], "Hangul":[], "Meaning":[]}
+proverbObj = {"Hanja":[], "Hangul":[], "Meaning":[]}
 proverbFirst = []
 
 for proverb in soup.find_all('td'):
@@ -13,15 +13,15 @@ for proverb in soup.find_all('td'):
     
 for i in range(0, len(proverbFirst)):
     if i%3 == 0 : 
-        proverbList["Hanja"].append(proverbFirst[i])
+        proverbObj["Hanja"].append(proverbFirst[i])
     elif i%3 == 1 : 
-        proverbList["Hangul"].append(proverbFirst[i])
+        proverbObj["Hangul"].append(proverbFirst[i])
     else :
-        proverbList["Meaning"].append(proverbFirst[i])
+        proverbObj["Meaning"].append(proverbFirst[i])
 
 f = open("C:/Users/user/Desktop/project/momentum/js/quotes-crawling.js", "w", encoding="utf-8")
 f.write("quotes = [")
-for i in range(0, len(proverbList["Hanja"])) :
-    f.write("{"+"Hanja : '" + proverbList["Hanja"][i] + "', Hangul : '" + proverbList["Hangul"][i] + "', Meaning : '" + proverbList["Meaning"][i]+"'"+"},\n")
+for i in range(0, len(proverbObj["Hanja"])) :
+    f.write("{"+"Hanja : '" + proverbObj["Hanja"][i] + "', Hangul : '" + proverbObj["Hangul"][i] + "', Meaning : '" + proverbObj["Meaning"][i]+"'"+"},\n")
 f.write("]")
 f.close()

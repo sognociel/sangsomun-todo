@@ -2,6 +2,7 @@
   z-index: 99;
   position: absolute;
   right: 5%;
+  animation: todoScreen 3s ease-in-out;
 }
 
 .todo img {
@@ -64,6 +65,15 @@
   background-image: url("../img/d-and-d.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes todoScreen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
