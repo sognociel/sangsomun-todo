@@ -12,8 +12,8 @@ function saveTodos() {
 
 function deleteToDo(event) {
   const removeli = event.target.parentElement;
-  // localStorage에서 지울 li를 제외한 li들의 리스트
   removeli.remove();
+  // localStorage에서 지울 li를 제외한 li들의 리스트
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(removeli.id));
   saveTodos();
 }

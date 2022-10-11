@@ -1234,9 +1234,9 @@ function todaysQuoteRandom() {
   // Math.round를 하면 반올림이 되기 때문에 최댓값이 나온다면 해당 순번에 해당하는 구절이 없어서 내림으로 한다.
   const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-  hanja.innerText = todaysQuote.Hanja;
-  hangul.innerText = todaysQuote.Hangul;
-  meaning.innerText = todaysQuote.Meaning;
+  hanja.innerText = todaysQuote["Hanja"];
+  hangul.innerText = todaysQuote["Hangul"];
+  meaning.innerText = todaysQuote["Meaning"];
 }
 
 todaysQuoteRandom();
