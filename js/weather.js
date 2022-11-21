@@ -1,4 +1,4 @@
-const API_KEY = "ad221ad90745788d1f64b330339736eb";
+const API_KEY = config.apikey;
 
 // 한문 변환은 주요 도시와 openweathermap에 있는 교집합만. 경기도, 강원도 등은 openweathermap에 없어서 제외시켰다.
 const cityName = {
